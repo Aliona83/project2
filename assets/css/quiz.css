@@ -1,0 +1,8 @@
+.answer-container {
+    display: flex;
+    margin-bottom: 23px;
+    background-color: azure;
+    border: 5px solid black;
+    width: 100%;
+    font-size: 77px;
+}
