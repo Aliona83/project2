@@ -51,8 +51,8 @@ const quizData = [
       question: "Which popular christmas beverage is also called 'milk punch?",
       a: "Milkpunch",
       b: "Eggnog",
-      c: "",
-      d: "",
+      c: "Milkbag",
+      d: "Eggpunch",
       correct: "b",
     },
     {
@@ -119,7 +119,28 @@ const quizData = [
       c: "Nine",
       d: "Ten",
       correct: "c",
-     
     },
   ];
   
+  const quiz=document.getElementById("quiz") 
+  const answerQuiz=document.querySelectorAll(".answer")
+  const questionQuiz=document.getElementById("question")
+  const text_aQuiz=document.getElementById("a_text")
+  const text_bQuiz=document.getElementById("b_text")
+  const text_cQuiz=document.getElementById("c_text")
+  const text_dQuiz=document.getElementById("d_text")
+  const submitBtn=document.getElementById("submit")
+
+
+
+  let currentQuiz = 0;
+  let score =0;
+
+  loadQuiz()
+
+  function loadQuiz() {
+
+
+  }
+
+
