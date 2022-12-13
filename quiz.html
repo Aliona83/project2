@@ -10,27 +10,33 @@
 </head>
 <body>
     <section>
-        <div class="container">
+        <div class="quiz-container" id="quiz">
+            <div class ="quiz-heder">
             <div id="game" class="flex-center flex-column">
-            <h2 id="question">Where did the Christmas tree originate from?</h2>
-            <div class="answer-container">
-                <p class="number-answer">1.</p>
-                <p class="text-answer">Answer 1</p>
-            </div>
-            <div class="answer-container">
-                <p class="number-answer">2</p>
-                <p class="text-answer">Answer 2</p>
-            </div>
-            <div class="answer-container">
-                <p class="number-answer">3.</p>
-                <p class="text-answer">Answer 3</p>
-            </div>
-            <div class="answer-container">
-                <p class="number-answer">4.</p>
-                <p class="text-answer">Answer 4</p>
-            </div>
+            <h2 id="question">Question Text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Answer</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Answer</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Answer</label>
+                </li>
+
+           
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Answer</label>
+                </li>
+            </ul>
         </div>
+        <button id="submit">Submit</button>
         </div>
+    </div> 
     </section>
 </body>
 </html>
