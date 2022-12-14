@@ -73,12 +73,12 @@ const quizData = [
       correct: "a",
     },
      {
-      question: "What is traditionally hidden inside a Christmas pudding?",
-      a: "Button",
-      b: "Pin",
-      c: "A coin",
-      d: "Stone",
-      correct: "c",
+      question: "1.	What is the name of the ballet that takes place at Christmas?",
+      a: "The Sleeping Beauty",
+      b: "The Nutcracker",
+      c: "The Little Match Girl",
+      d: "The Snowman",
+      correct: "b",
      },
      {
       question: "What is traditionally hidden inside a Christmas pudding?",
@@ -184,8 +184,20 @@ const quizData = [
      }
   }
 })
+//Creating Timer For Quiz Timer Section
+let timer = 0;
+let countDown = ()=>{
+  if(timer === 20)
+  {
+    clearInterval(interval);
+  }
+  else{
+     timer++;
+     console.log(timer);
+  }
+}
+//SetInterval
 
 
 
-//Add timer
  

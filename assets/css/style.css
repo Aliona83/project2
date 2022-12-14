@@ -104,7 +104,7 @@ ul li label {
   cursor: pointer;
 }
 button {
-  position: relative;
+  position:relative;
   background-color: #c65b7c;
   color: black;
   display: block;
@@ -113,7 +113,8 @@ button {
   font-size: 1.2rem;
   padding: 0.5rem;
   margin: 25px;
-  transform: translate(1rem,8ex);
+  transform: translate(1rem,2ex);
+  
 }
 button:hover {
   background-color: #dc9cb0;
