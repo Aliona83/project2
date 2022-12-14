@@ -76,6 +76,16 @@ h4 {
 .quiz-heder {
   padding: 2rem;
 }
+#countDown {
+  background-color: #83b692;
+  font-size: 1.6rem;
+  position: relative;
+  padding: 5px;
+  margin: 1px;
+  text-align: center;
+  width: 150px;
+  border-radius: 5px;
+}
 ul {
   list-style-type: none;
   padding: 5px;

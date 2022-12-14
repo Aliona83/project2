@@ -1,3 +1,4 @@
+// The arrays of quiz question
 const quizData = [
     {
       question: "Where did the Christmas tree originate from?",
@@ -121,17 +122,19 @@ const quizData = [
       correct: "c",
     },
   ];
-  
+  //Got elements from DOM
   const quiz=document.getElementById("quiz") 
-  const answerQuiz=document.querySelectorAll(".answer")
-  const questionQuiz=document.getElementById("question")
-  const text_aQuiz=document.getElementById("a_text")
-  const text_bQuiz=document.getElementById("b_text")
-  const text_cQuiz=document.getElementById("c_text")
-  const text_dQuiz=document.getElementById("d_text")
-  const submitBtn=document.getElementById("submit")
+  const answerQuiz = document.querySelectorAll(".answer")
+  const questionQuiz = document.getElementById("question")
+  const text_aQuiz = document.getElementById("a_text")
+  const text_bQuiz = document.getElementById("b_text")
+  const text_cQuiz = document.getElementById("c_text")
+  const text_dQuiz = document.getElementById("d_text")
+  const questionTimer = document.getElementById("countDown")
+  const submitBtn = document.getElementById("submit")
 
 
+//variables
 
   let currentQuiz = 0;
   let score =0;
@@ -139,8 +142,46 @@ const quizData = [
   loadQuiz()
 
   function loadQuiz() {
-
+    deselectAnswers()
+    const currentQuizData = quizData[currentQuiz]
+    questionQuiz.innerHTML = currentQuizData.question
+    text_aQuiz.innerHTML = currentQuizData.a
+    text_bQuiz.innerHTML = currentQuizData.b
+    text_cQuiz.innerHTML = currentQuizData.c
+    text_dQuiz.innerHTML = currentQuizData.d
 
   }
 
+  function deselectAnswers() {
+    answerQuiz.forEach(answerQuiz=> answerQuiz.checked = false)
+  }
+  function getSelected() {
+   let answerQuiz
+   answerQuiz.forEach(answerQuiz => {
+    if(answerQuiz.checked) {
+      answer = answerQuiz.id
+    }
+   })
+   return answer
+  }
 
+
+
+//Add timer
+ let time = 20
+ let quizTimeInSeconds = time * 20 * 20;
+ quizTime = quizTimeInSeconds / 20;
+ let counting = document.getElementById("countDown")
+ function startCountdown() {
+    let quizTimer = setInterval(function() {
+        if(quizTime <= 0) {
+            clearInterval(quizTimer);
+            showScore();
+        }else {
+            quizTime--;
+            let sec = Math.floor(quizTime % 20);
+            counting.innerHTML = `TIME: ${min} : ${sec}`;
+        }
+    },1000)
+ }
+ startCountdown();
