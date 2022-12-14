@@ -9,11 +9,16 @@
     <title>Quiz page</title>
 </head>
 <body>
+    <!--Quiz container-->
     <section>
         <div class="quiz-container" id="quiz">
-            <p id="countDown">00:00</p>
-            <div class ="quiz-heder">
+            <div id="quiz-heder">
+                <div class="timer-header">
+                <div id="timer">Time Left</div>
+                <p id="time">00</p>
+            </div>
             <div id="game" class="flex-center flex-column">
+                <!--Question and Answers section-->
             <h2 id="question">Question Text</h2>
             <ul>
                 <li>
@@ -28,8 +33,7 @@
                     <input type="radio" name="answer" id="c" class="answer">
                     <label for="c" id="c_text">Answer</label>
                 </li>
-
-           
+                <li>
                     <input type="radio" name="answer" id="d" class="answer">
                     <label for="d" id="d_text">Answer</label>
                 </li>
@@ -39,6 +43,7 @@
         </div>
     </div> 
     </section>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>

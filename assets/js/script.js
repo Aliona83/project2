@@ -137,26 +137,27 @@ const quizData = [
 //variables
 
   let currentQuiz = 0;
-  let score =0;
+  let score = 0;
 
   loadQuiz()
-
+// functions for loading question with answers
   function loadQuiz() {
     deselectAnswers()
     const currentQuizData = quizData[currentQuiz]
-    questionQuiz.innerHTML = currentQuizData.question
-    text_aQuiz.innerHTML = currentQuizData.a
-    text_bQuiz.innerHTML = currentQuizData.b
-    text_cQuiz.innerHTML = currentQuizData.c
-    text_dQuiz.innerHTML = currentQuizData.d
+
+    questionQuiz.innerText = currentQuizData.question
+    text_aQuiz.innerText = currentQuizData.a
+    text_bQuiz.innerText = currentQuizData.b
+    text_cQuiz.innerText = currentQuizData.c
+    text_dQuiz.innerText= currentQuizData.d
 
   }
-
+//function to sellect right answer
   function deselectAnswers() {
-    answerQuiz.forEach(answerQuiz=> answerQuiz.checked = false)
+    answerQuiz.forEach(answerQuiz => answerQuiz.checked = false)
   }
   function getSelected() {
-   let answerQuiz
+   let answer
    answerQuiz.forEach(answerQuiz => {
     if(answerQuiz.checked) {
       answer = answerQuiz.id
@@ -164,24 +165,27 @@ const quizData = [
    })
    return answer
   }
+//creating submit button for each question
+  submitBtn.addEventListener('click', () => {
+  const answer = getSelected()
+  if(answer) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++
+    } 
+    currentQuiz++
+
+     if(currentQuiz < quizData.length) {
+      loadQuiz()
+     } else {
+      quiz.innerHTML =`
+      <h2>You answered ${score}/${quizData.length} question correctly
+      <button onclick ="location.reload()"
+      ` 
+     }
+  }
+})
 
 
 
 //Add timer
- let time = 20
- let quizTimeInSeconds = time * 20 * 20;
- quizTime = quizTimeInSeconds / 20;
- let counting = document.getElementById("countDown")
- function startCountdown() {
-    let quizTimer = setInterval(function() {
-        if(quizTime <= 0) {
-            clearInterval(quizTimer);
-            showScore();
-        }else {
-            quizTime--;
-            let sec = Math.floor(quizTime % 20);
-            counting.innerHTML = `TIME: ${min} : ${sec}`;
-        }
-    },1000)
- }
- startCountdown();
+ 
