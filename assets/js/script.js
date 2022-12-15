@@ -168,7 +168,7 @@ const quizData = [
    })
    return answer
   }
-// will change question numberers from1-15
+
 
 
 //creating submit button for each question
@@ -191,23 +191,36 @@ const quizData = [
      }
   }
 })
-//Creating Timer For Quiz Timer Section
-var sec = 20;
-var time = setInterval(myTimer, 1000);
-function myTimer() {
-    document.getElementById('timer').innerHTML = "Timer left" + ":" + sec;
-    sec--;
-    if (sec == -1) {
-        clearInterval(time);
-        alert("Time out!! :(");
-    }
-    function stop_timer(){
-      document.getElementById('submit').innerHTML = "";
-      clearInterval(interval);
-      }
-    }
-  
 
+// will change question numberers from1-15
+//Creating Timer For Quiz Timer Section
+var counter = 20;
+var questionCount = 0;
+var questions = quizData[currentQuiz];
+questionDivID = document.getElementById("question");
+  
+setInterval(function() {
+  counter--;
+   if (counter >= 0) {
+    id = document.getElementById("timer");
+    id.innerHTML = counter;
+    questionCount++;
+   }
+   if(counter === 0 ) {
+    id.innerHTML = "Time Up!";
+    counter = 20;
+    questionCount++;
+   }
+   if (questionCount === currentQuiz.length) {
+    questionDivID.innerHTML = "Well Played! Game is over";
+    id.innerHTML = "";
+   } else { questionDivID.innerHTML = currentQuiz;
+   }
+},1000);
+function goToNextQuestion() {
+  questionCount++;
+  counter = 10;
+}
 
 
  
