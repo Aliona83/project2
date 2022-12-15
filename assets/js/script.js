@@ -123,15 +123,17 @@ const quizData = [
     },
   ];
   //Got elements from DOM
-  const quiz=document.getElementById("quiz") 
+  const quiz = document.getElementById("quiz") 
   const answerQuiz = document.querySelectorAll(".answer")
   const questionQuiz = document.getElementById("question")
   const text_aQuiz = document.getElementById("a_text")
   const text_bQuiz = document.getElementById("b_text")
   const text_cQuiz = document.getElementById("c_text")
   const text_dQuiz = document.getElementById("d_text")
-  const questionTimer = document.getElementById("countDown")
+  const question_Number = document.getElementById("questionNumber")
+  const questionTimer = document.getElementById("timer")
   const submitBtn = document.getElementById("submit")
+
 
 
 //variables
@@ -162,9 +164,13 @@ const quizData = [
     if(answerQuiz.checked) {
       answer = answerQuiz.id
     }
+
    })
    return answer
   }
+// will change question numberers from1-15
+
+
 //creating submit button for each question
   submitBtn.addEventListener('click', () => {
   const answer = getSelected()
@@ -176,6 +182,7 @@ const quizData = [
 
      if(currentQuiz < quizData.length) {
       loadQuiz()
+      
      } else {
       quiz.innerHTML =`
       <h2>You answered ${score}/${quizData.length} question correctly
@@ -185,18 +192,21 @@ const quizData = [
   }
 })
 //Creating Timer For Quiz Timer Section
-let timer = 0;
-let countDown = ()=>{
-  if(timer === 20)
-  {
-    clearInterval(interval);
-  }
-  else{
-     timer++;
-     console.log(timer);
-  }
-}
-//SetInterval
+var sec = 20;
+var time = setInterval(myTimer, 1000);
+function myTimer() {
+    document.getElementById('timer').innerHTML = "Timer left" + ":" + sec;
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("Time out!! :(");
+    }
+    function stop_timer(){
+      document.getElementById('submit').innerHTML = "";
+      clearInterval(interval);
+      }
+    }
+  
 
 
 
