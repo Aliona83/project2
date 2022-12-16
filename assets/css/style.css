@@ -29,6 +29,24 @@ h1 {
 #guide {
   text-align: center;
 }
+
+#username {
+  font-size: 45px;
+  font-family: "Exo" sans-serif;
+  margin: 35px;
+  color: #691515;
+}
+#name-field {
+  padding: 25px;
+  font-size: 15px;
+  margin-top: 35px;
+  height: 45px;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  background-color: #dc9cb0;
+  color: black;
+}
 h2 {
   font-family: "Exo", sans-serif;
   margin: 58px;
