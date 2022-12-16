@@ -122,82 +122,80 @@ const quizData = [
       correct: "c",
     },
   ];
-  //Got elements from DOM
-  const quiz = document.getElementById("quiz") 
-  const answerQuiz = document.querySelectorAll(".answer")
-  const questionQuiz = document.getElementById("question")
-  const text_aQuiz = document.getElementById("a_text")
-  const text_bQuiz = document.getElementById("b_text")
-  const text_cQuiz = document.getElementById("c_text")
-  const text_dQuiz = document.getElementById("d_text")
-  const question_Number = document.getElementById("questionNumber")
-  const questionTimer = document.getElementById("timer")
-  const submitBtn = document.getElementById("submit")
-
-
+//Got elements from DOM
+const quiz = document.getElementById("quiz"); 
+const answerQuiz = document.querySelectorAll(".answer");
+const questionQuiz = document.getElementById("question");
+const text_aQuiz = document.getElementById("a_text");
+const text_bQuiz = document.getElementById("b_text");
+const text_cQuiz = document.getElementById("c_text");
+const text_dQuiz = document.getElementById("d_text");
+const question_Number = document.getElementById("questionNumber");
+const questionTimer = document.getElementById("timer");
+const submitBtn = document.getElementById("submit");
 
 //variables
+let currentQuiz = 0;
+let score = 0;
 
-  let currentQuiz = 0;
-  let score = 0;
-
-  loadQuiz()
+loadQuiz()
 // functions for loading question with answers
-  function loadQuiz() {
-    deselectAnswers()
-    const currentQuizData = quizData[currentQuiz]
+function loadQuiz() {
+  deselectAnswers()
+  const currentQuizData = quizData[currentQuiz]
 
-    questionQuiz.innerText = currentQuizData.question
-    text_aQuiz.innerText = currentQuizData.a
-    text_bQuiz.innerText = currentQuizData.b
-    text_cQuiz.innerText = currentQuizData.c
-    text_dQuiz.innerText= currentQuizData.d
+  questionQuiz.innerText = currentQuizData.question
+  text_aQuiz.innerText = currentQuizData.a
+  text_bQuiz.innerText = currentQuizData.b
+  text_cQuiz.innerText = currentQuizData.c
+  text_dQuiz.innerText= currentQuizData.d
 
+}
+//function unchecking answers
+function deselectAnswers() {
+  answerQuiz.forEach(option => option.checked = false)
+}
+//
+function getSelected() {
+  let answer
+  answerQuiz.forEach(answerQuiz => {
+  if(answerQuiz.checked) {
+    answer = answerQuiz.id
   }
-//function to sellect right answer
-  function deselectAnswers() {
-    answerQuiz.forEach(answerQuiz => answerQuiz.checked = false)
-  }
-  function getSelected() {
-   let answer
-   answerQuiz.forEach(answerQuiz => {
-    if(answerQuiz.checked) {
-      answer = answerQuiz.id
-    }
 
-   })
-   return answer
-  }
+  })
+  return answer
+}
 
 
 
 //creating submit button for each question
-  submitBtn.addEventListener('click', () => {
-  const answer = getSelected()
-  if(answer) {
-    if (answer === quizData[currentQuiz].correct) {
-      score++
-    } 
-    currentQuiz++
+submitBtn.addEventListener('click', () => {
+const answer = getSelected()
+if(answer) {
+  if (answer === quizData[currentQuiz].correct) {
+    score++
+  } 
+  currentQuiz++
 
-     if(currentQuiz < quizData.length) {
-      loadQuiz()
-      
-     } else {
-      quiz.innerHTML =`
-      <h2>You answered ${score}/${quizData.length} question correctly
-      <button onclick ="location.reload()"
-      ` 
-     }
+    if(currentQuiz < quizData.length) {
+    loadQuiz()
+    
+    } else {
+    quiz.innerHTML =`
+    <h2>You answered ${score}/${quizData.length} question correctly
+    <button onclick ="location.reload()"
+    ` 
+    }
   }
 })
 
 // will change question numberers from1-15
 //Creating Timer For Quiz Timer Section
-var counter = 20;
-var questionCount = 0;
-var questions = quizData[currentQuiz];
-questionDivID = document.getElementById("question");
+let counter = 20;
+let questionCount = 0;
+let questions = quizData[currentQuiz];
+questionDivID = document.getElementById("questionNumber");
   
 setInterval(function() {
   counter--;
@@ -219,7 +217,7 @@ setInterval(function() {
 },1000);
 function goToNextQuestion() {
   questionCount++;
-  counter = 10;
+  counter = 20;
 }
 
 
