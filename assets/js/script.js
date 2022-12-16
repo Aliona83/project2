@@ -72,7 +72,7 @@ const quizData = [{
     correct: "a",
   },
   {
-    question: "1.	What is the name of the ballet that takes place at Christmas?",
+    question: "What is the name of the ballet that takes place at Christmas?",
     a: "The Sleeping Beauty",
     b: "The Nutcracker",
     c: "The Little Match Girl",

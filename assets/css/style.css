@@ -36,9 +36,9 @@ h2 {
   color: #691515;
   text-align: center;
 }
-h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
+li {
+  font-size: 25px;
+  text-align: left;
 }
 /* Create container */
 .container {
@@ -76,14 +76,11 @@ h4 {
  position: relative;
  transform: translate(30rem, 20ex);
 }
-/* #questionNumber {
-  position: absolute;
-  padding: 19px;
-  font-size: 23px;
-  bottom: 15px;
-  left: 0;
-
-} */
+.question-number-position {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
 #question {
 color: black;
 font-family: Roboto sans-serif;
