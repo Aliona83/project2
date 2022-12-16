@@ -76,14 +76,14 @@ h4 {
  position: relative;
  transform: translate(30rem, 20ex);
 }
-#questionNumber {
+/* #questionNumber {
   position: absolute;
   padding: 19px;
   font-size: 23px;
   bottom: 15px;
   left: 0;
 
-}
+} */
 #question {
 color: black;
 font-family: Roboto sans-serif;
