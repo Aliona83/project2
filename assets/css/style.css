@@ -8,6 +8,9 @@
 body {
     background-image: url('../images/christmas2copy.webp');
     background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
 }
 h1 {
   font-size: 5.4rem;
@@ -25,9 +28,6 @@ h1 {
 }
 #guide {
   text-align: center;
-  position: relative;
-  top: 1rem;
-  left: 5rem;
 }
 h2 {
   font-family: "Exo", sans-serif;
@@ -42,24 +42,28 @@ h4 {
 }
 /* Create container */
 .container {
-  height: 100vh;
   display: flex;
   justify-content: center;
-  max-width: 80rem;
+}
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5rem;
+
 }
 
 /* create buttons*/
 #myBtn {
+  background-color: #c65b7c;
   color: black;
   font-size: 28px;
-  position: relative;
   width: 20rem;
   text-align: center;
   padding: 10px;
   border: 3px solid #5c564d;
-  margin: 10px;
+  margin: 5rem auto;
   border-radius: 10px;
-  transform: translate(14rem,8ex);
 }
 /* quiz-container */
 .quiz-container {
