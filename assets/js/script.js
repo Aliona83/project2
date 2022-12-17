@@ -131,11 +131,16 @@ const text_dQuiz = document.getElementById("d_text");
 const question_Number = document.getElementById("questionNumber");
 const questionTimer = document.getElementById("timer");
 const submitBtn = document.getElementById("submit");
-const usernameBox = document.querySelector(".name-field");
-const startButton = document.getElementById("myBtn")
+
 // Start quiz //
-
-
+let usernameBox = document.getElementById("name");
+let startButton = document.getElementById("myBtn")
+startGame()
+ function StarGame (){
+  startButton.addEventListener('click', e => {
+    loadQuiz()
+  })
+ }
 
 //variables
 let currentQuiz = 0;
@@ -167,7 +172,6 @@ function getSelected() {
     if (answerQuiz.checked) {
       answer = answerQuiz.id
     }
-
   })
   return answer
 }

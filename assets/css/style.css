@@ -8,13 +8,12 @@
 }
 
 body {
-  background-image: url('../images/christmas2copy.webp');
+  background-image: url('../images/christmas2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  background-position: center;
+  height: 100vh;
 }
-/* First page of Quiz */
+/* Start Quiz */
 h1 {
   font-size: 5.4rem;
   display: flex;
@@ -53,6 +52,7 @@ h2 {
   position: relative;
   background-color: #dc9cb0;
   color: black;
+  border-radius: 10px;
 }
 
 

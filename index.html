@@ -20,7 +20,7 @@
     </div>
   </header>     
         <!--Guide section-->
-         <section class="center-column"> 
+        <section class="center-column"> 
         <div id="guide">
           <h2>Quiz Rules</h2>
           <ol>
@@ -30,7 +30,7 @@
           <li> You can't exit from the quiz while you are playing.</li>
           </ol>
           <form>
-            <div class="name">
+            <div id="name">
               <label for="name-field" class="username">Name</label>
               <input class="name-field" type="text" name="full-name" placeholder="Enter your name">
             </div>
@@ -71,11 +71,16 @@
             </li>
         </ul>
     </div>
-    <button id="submit">Submit</button>
+    <button id="submit" class="hide">Next</button>
     <p class="question-number-position">Question <span id="questionNumber">0</span> of 15</p>
 </div> 
 </section>
-
+<!--Result section-->
+<section>
+  <span class="hidden" id="score">Score</span>
+  <button id="myBtn" type="button" class="hide">Play Again!</button>
+  <button id="myBtn" type="button" class="hide">Finish the game !</button>
+</section>
     
 </body>
 </html>
