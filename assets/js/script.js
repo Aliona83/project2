@@ -131,24 +131,31 @@ const text_dQuiz = document.getElementById("d_text");
 const question_Number = document.getElementById("questionNumber");
 const questionTimer = document.getElementById("timer");
 const submitBtn = document.getElementById("submit");
+const usernameBox = document.querySelector(".name-field");
+const startButton = document.getElementById("myBtn")
+// Start quiz //
+
+
 
 //variables
 let currentQuiz = 0;
 let score = 0;
 let counter = 20;
+
 loadQuiz()
 // functions for loading question with answers
 function loadQuiz() {
   deselectAnswers()
   const currentQuizData = quizData[currentQuiz]
   counter = 20;
-  questionQuiz.innerText = currentQuizData.question
-  text_aQuiz.innerText = currentQuizData.a
-  text_bQuiz.innerText = currentQuizData.b
-  text_cQuiz.innerText = currentQuizData.c
+  questionQuiz.innerText = currentQuizData.question;
+  text_aQuiz.innerText = currentQuizData.a;
+  text_bQuiz.innerText = currentQuizData.b;
+  text_cQuiz.innerText = currentQuizData.c;
   text_dQuiz.innerText = currentQuizData.d
-  question_Number.innerText =  currentQuiz + 1;
+  question_Number.innerText = currentQuiz + 1;
 }
+
 //function unchecking answers
 function deselectAnswers() {
   answerQuiz.forEach(option => option.checked = false)

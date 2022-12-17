@@ -1,42 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital@1&family=Roboto&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   font-family: "Exo", sans-serif;
   box-sizing: border-box;
 }
+
 body {
-    background-image: url('../images/christmas2copy.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    background-position: center;
+  background-image: url('../images/christmas2copy.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
 }
+/* First page of Quiz */
 h1 {
   font-size: 5.4rem;
   display: flex;
   justify-content: center;
- margin-left: 55px;
+  margin-left: 55px;
   color: #691515;
   padding: 42px;
- 
+
 }
 
-.start:hover {
-  background: #dde0ab;
-  color: black;
-}
 #guide {
   text-align: center;
 }
+h2 {
+  font-family: "Exo", sans-serif;
+  margin: 58px;
+  font-size: 35px;
+  color: #691515;
+  text-align: center;
+}
 
-#username {
+.username {
   font-size: 45px;
-  font-family: "Exo" sans-serif;
+  font-family: "Exo"sans-serif;
   margin: 35px;
   color: #691515;
 }
-#name-field {
+
+.name-field {
   padding: 25px;
   font-size: 15px;
   margin-top: 35px;
@@ -47,22 +54,19 @@ h1 {
   background-color: #dc9cb0;
   color: black;
 }
-h2 {
-  font-family: "Exo", sans-serif;
-  margin: 58px;
-  font-size: 35px;
-  color: #691515;
-  text-align: center;
-}
+
+
 li {
   font-size: 25px;
   text-align: left;
 }
+
 /* Create container */
 .container {
   display: flex;
   justify-content: center;
 }
+
 .center-column {
   display: flex;
   flex-direction: column;
@@ -83,6 +87,7 @@ li {
   margin: 5rem auto;
   border-radius: 10px;
 }
+
 /* quiz-container */
 .quiz-container {
   height: 75vh;
@@ -91,46 +96,57 @@ li {
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
   overflow: hidden;
- position: relative;
- transform: translate(30rem, 20ex);
+  position: relative;
+  transform: translate(30rem, 20ex);
 }
+#quiz-heder {
+  padding: 1rem;
+}
+/* question section */
 .question-number-position {
   font-size: 30px;
   text-align: center;
   margin: 15px;
 }
 #question {
-color: black;
-font-family: Roboto sans-serif;
-margin: 25px;
+  color: black;
+  font-family: Roboto sans-serif;
+  margin: 25px;
 }
-#quiz-heder {
-  padding: 1rem;
+/* Favicon icon */
+
+img {
+  position: relative;
+  top: -5rem;
 }
+/* Timer section */
 .timer-header {
   width: 100px;
   height: auto;
-  background-color:  #e5b80b;
+  background-color: #e5b80b;
   border: #691515;
   border-radius: 5px;
 }
 #timer {
-font-size: 15px;
+  font-size: 15px;
 }
 
 ul {
   list-style-type: none;
   padding: 2px;
 }
+
 ul li {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
+
 ul li label {
   cursor: pointer;
 }
+
 button {
-  position:relative;
+  position: relative;
   background-color: #c65b7c;
   color: black;
   width: 90%;
@@ -138,9 +154,10 @@ button {
   font-size: 1.2rem;
   padding: 0.5rem;
   margin: 25px;
-  transform: translate(1rem,2ex);
-  
+  transform: translate(1rem, 2ex);
+
 }
+
 button:hover {
   background-color: #dc9cb0;
 }
