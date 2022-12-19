@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Christmas, christma squiz">
-    <meta name="description" content="Christmas quiz: Time for quiz">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Christmas Quiz</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Christmas, christma squiz">
+  <meta name="description" content="Christmas quiz: Time for quiz">
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <title>Christmas Quiz</title>
 </head>
+
 <body>
-    
+
   <!--Header-->
   <header>
     <div class="container">
@@ -18,69 +20,70 @@
         <h1>Time for Quiz</h1>
       </div>
     </div>
-  </header>     
-        <!--Guide section-->
-        <section class="center-column"> 
-        <div id="guide">
-          <h2>Quiz Rules</h2>
-          <ol>
-          <li> You have only <strong>20 seconds</strong> for each question.</li> 
-          <li> Once you select your answer. It can't be change.</li>
-          <li> You will get points on the basic of your correct answer.</li>
-          <li> You can't exit from the quiz while you are playing.</li>
-          </ol>
-          <form>
-            <div id="name">
-              <label for="name-field" class="username">Name</label>
-              <input class="name-field" type="text" name="full-name" placeholder="Enter your name">
-            </div>
-          </form>
+  </header>
+  <!--Guide section-->
+  <section id="intro-section" class="center-column">
+    <div id="guide">
+      <h2>Quiz Rules</h2>
+      <ol>
+        <li> You have only <strong>20 seconds</strong> for each question.</li>
+        <li> Once you confirm your answer, it can't be changed.</li>
+        <li> You will get score for your correct answer.</li>
+        <li> You can't exit from the quiz while you are playing.</li>
+      </ol>
+      <!-- <form>
+        <div id="name">
+          <label id="name-field" class="username">Name</label>
+          <input class="name-field" type="text" name="full-name" placeholder="Enter your name">
         </div>
-       <button id="myBtn" type="button">Let's start a Quiz!</button>
-  </section> 
-  <section>
-    <div id="game" class="flex-center flex-column"></div>
+      </form> -->
+    </div>
+    <button id="start-btn">Let's start a Quiz!</button>
+  </section>
+  <section id="quiz-section">
+    <!-- <div id="game" class="flex-center flex-column"></div> -->
     <div class="quiz-container" id="quiz">
-        
-        <div id="quiz-heder">
-<!--Timer header-->
-            <div class="timer-header">
-            <div id="timer">Time Left: <span></span>
-        
-        </div>
+      <!--Timer header-->
+      <!-- <div class="timer-header">
+          <div id="timer">Time Left: <span></span>
+
+          </div>
+        </div> -->
+      <!--Question and Answers section-->
+      <h2 id="question">Text</h2>
+
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Answer</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Answer</label>
+        </li>
+      </ul>
+      <button id="submit" class="hide">Next</button>
+      <!-- <p class="question-number-position">Question <span id="questionNumber">0</span> of 15</p> -->
     </div>
-            <!--Question and Answers section-->
-        <h2 id="question">Text</h2>
-        
-        <ul>
-            <li>
-                <input type="radio" name="answer" id="a" class="answer">
-                <label for="a" id="a_text">Answer</label>
-            </li>
-            <li>
-                <input type="radio" name="answer" id="b" class="answer">
-                <label for="b" id="b_text">Answer</label>
-            </li>
-            <li>
-                <input type="radio" name="answer" id="c" class="answer">
-                <label for="c" id="c_text">Answer</label>
-            </li>
-            <li>
-                <input type="radio" name="answer" id="d" class="answer">
-                <label for="d" id="d_text">Answer</label>
-            </li>
-        </ul>
+  </section>
+  <!--Finish section-->
+  <section id="result-section">
+    <div>
+    <h2>Quiz Results</h2>
+      <p class="hidden" id="score">Results</p>
+      <button id="restart" type="button" class="hidden">Play Again!</button>
+     <!-- <button id="finish"  type="button" class="hidden">Finish game !</button> -->
     </div>
-    <button id="submit" class="hide">Next</button>
-    <p class="question-number-position">Question <span id="questionNumber">0</span> of 15</p>
-</div> 
-</section>
-<!--Finish section-->
-<section>
-  <span class="hidden" id="score">Results</span>
-  <button class="myBtnAgain" type="button" id="hide">Play Again!</button>
-  <button class="myBtnFinish" type="button" id="hide">Finish the game !</button>
-</section>
-    <script src="assets/js/script.js"></script>
+  </section>
+  <!-- <script src="assets/js/script.js"></script> -->
 </body>
+
 </html>

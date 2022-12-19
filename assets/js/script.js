@@ -224,7 +224,7 @@ setInterval(function () {
     } else {
       quiz.innerHTML = `
     <h2>Your results${score}/${quizData.length} is
-    <button onclick ="location.reload()"
+    <button onclick="location.reload()">Play Again!</button>
     `
     }
   }

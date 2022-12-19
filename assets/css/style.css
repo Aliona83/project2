@@ -39,7 +39,7 @@ h2 {
 
 .username {
   font-size: 45px;
-  font-family: "Exo"sans-serif;
+  font-family: "Exo", sans-serif;
   margin: 35px;
   color: #691515;
 }
@@ -115,7 +115,7 @@ li {
 
 #question {
   color: black;
-  font-family: Roboto sans-serif;
+  font-family: "Exo", sans-serif;
   margin: 25px;
 }
 
@@ -170,22 +170,27 @@ button:hover {
   background-color: #dc9cb0;
   cursor: pointer;
 }
-#myBtnAgain {
+#restart {
   background-color: #c65b7c;
   color: black;
   font-size: 28px;
-  width: 20rem;
+  width: 15rem;
   text-align: center;
   padding: 10px;
   border: 3px solid #5c564d;
   margin: 5rem auto;
   border-radius: 10px;
 }
-#myBtnFinish {
+
+#finish:hover {
+  background-color: #dc9cb0;
+  cursor: pointer;
+}
+#finish, #restart {
   background-color: #c65b7c;
   color: black;
   font-size: 28px;
-  width: 20rem;
+  width: 15rem;
   text-align: center;
   padding: 10px;
   border: 3px solid #5c564d;
