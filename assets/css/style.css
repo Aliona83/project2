@@ -13,6 +13,7 @@ body {
   background-size: cover;
   height: 100vh;
 }
+
 /* Start Quiz */
 h1 {
   font-size: 5.4rem;
@@ -27,6 +28,7 @@ h1 {
 #guide {
   text-align: center;
 }
+
 h2 {
   font-family: "Exo", sans-serif;
   margin: 58px;
@@ -99,26 +101,31 @@ li {
   position: relative;
   transform: translate(30rem, 20ex);
 }
+
 #quiz-heder {
   padding: 1rem;
 }
+
 /* question section */
 .question-number-position {
   font-size: 30px;
   text-align: center;
   margin: 15px;
 }
+
 #question {
   color: black;
   font-family: Roboto sans-serif;
   margin: 25px;
 }
+
 /* Favicon icon */
 
 img {
   position: relative;
   top: -5rem;
 }
+
 /* Timer section */
 .timer-header {
   width: 100px;
@@ -127,6 +134,7 @@ img {
   border: #691515;
   border-radius: 5px;
 }
+
 #timer {
   font-size: 15px;
 }
@@ -160,4 +168,27 @@ button {
 
 button:hover {
   background-color: #dc9cb0;
+  cursor: pointer;
+}
+#myBtnAgain {
+  background-color: #c65b7c;
+  color: black;
+  font-size: 28px;
+  width: 20rem;
+  text-align: center;
+  padding: 10px;
+  border: 3px solid #5c564d;
+  margin: 5rem auto;
+  border-radius: 10px;
+}
+#myBtnFinish {
+  background-color: #c65b7c;
+  color: black;
+  font-size: 28px;
+  width: 20rem;
+  text-align: center;
+  padding: 10px;
+  border: 3px solid #5c564d;
+  margin: 5rem auto;
+  border-radius: 10px;
 }

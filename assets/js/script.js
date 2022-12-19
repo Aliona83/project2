@@ -121,6 +121,8 @@ const quizData = [{
   },
 ];
 //Got elements from DOM
+const container = document.querySelector(".container")
+const centerColumn = document.querySelector(".center-column")
 const quiz = document.getElementById("quiz");
 const answerQuiz = document.querySelectorAll(".answer");
 const questionQuiz = document.getElementById("question");
@@ -132,22 +134,23 @@ const question_Number = document.getElementById("questionNumber");
 const questionTimer = document.getElementById("timer");
 const submitBtn = document.getElementById("submit");
 
-// Start quiz //
-let usernameBox = document.getElementById("name");
-let startButton = document.getElementById("myBtn")
-startGame()
- function StarGame (){
-  startButton.addEventListener('click', e => {
-    loadQuiz()
-  })
- }
 
+
+// Start quiz //
+// const usernameBox = document.getElementById("name");
+// const startButton = document.getElementById("myBtn");
+// const username = document.querySelector(".name-field");
+// const storeUsername = localStorage.getItem("text");
+
+
+ 
 //variables
 let currentQuiz = 0;
 let score = 0;
 let counter = 20;
 
 loadQuiz()
+
 // functions for loading question with answers
 function loadQuiz() {
   deselectAnswers()
@@ -220,7 +223,7 @@ setInterval(function () {
 
     } else {
       quiz.innerHTML = `
-    <h2>You answered ${score}/${quizData.length} question correctly
+    <h2>Your results${score}/${quizData.length} is
     <button onclick ="location.reload()"
     `
     }
