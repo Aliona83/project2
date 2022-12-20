@@ -154,7 +154,7 @@ loadQuiz()
 // functions for loading question with answers
 function loadQuiz() {
   deselectAnswers()
-  const currentQuizData = quizData[currentQuiz]
+  const currentQuizData = quizData[currentQuiz];
   counter = 20;
   questionQuiz.innerText = currentQuizData.question;
   text_aQuiz.innerText = currentQuizData.a;
