@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital@1&family=Roboto&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Exo", sans-serif;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Exo", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-  background-image: url('../images/christmas2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+    background-image: url('../images/christmas2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
+
 h1 {
     font-size: 3rem;
     color: #691515;
@@ -22,15 +23,18 @@ h1 {
     padding: 1rem 0;
     text-shadow: 5px 5px 5px white;
 }
+
 .main-content {
     margin-top: 4rem;
     padding: 1.8rem;
     background-color: #f9627d99;
-} 
+}
+
 h2 {
     text-align: center;
     margin-bottom: 1.2rem;
 }
+
 button {
     display: block;
     margin: 1rem auto 0;
@@ -41,12 +45,15 @@ button {
     font-size: 1em;
     min-width: 8.9rem;
 }
+
 ul {
     list-style-type: none;
 }
-ul > li {
+
+ul>li {
     margin-bottom: .3rem;
 }
+
 .hide {
     display: none;
 }
