@@ -10,3 +10,17 @@ function showQuiz() {
     quizSection.classList.remove("hide");
 }
 startButton.addEventListener('click', showQuiz);
+// Show question and choice of answers
+//  select the right answer
+// button to next question
+
+const question = document.getElementById("question");
+const answer = document.getElementsByClassName(".answer");
+const textQuizA = document.getElementById("a_text");
+const textQuizB = document.getElementById("b_text");
+const textQuizC = document.getElementById("c_text");
+const textQuizD = document.getElementById("d_text");
+const submit = document.getElementById("submit");
+/**
+ * create function for loading question with answers
+ */

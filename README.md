@@ -30,3 +30,11 @@ This project will help to remember some traditions, and facts about Christmas. T
 ***
 The game will be broken into three areas :
 #### Home page :
+* Title of Quiz game.
+"Play button" takes the user to the Quiz rules. Quiz rules tells how visiter have to play the game.
+#### Game page 
+* Display a randomly generated question for user.
+underneath each question has four choices with each of the possible correct answers.
+* Button "next"
+User can go to next question.
+* Timer for each question. Gamer player will have 20 seconds for each question. 
