@@ -1,32 +1,3 @@
-// Got elements from DOM
-
-const startButton = document.getElementById("start-btn");
-const introSection = document.getElementById("intro-section");
-const quizSection = document.getElementById("quiz-section");
-/**
- * hide the intro section and show the quiz section
- */
-function showQuiz() {
-    introSection.classList.add("hide");
-    quizSection.classList.remove("hide");
-}
-startButton.addEventListener('click', showQuiz);
-// load question 
-// load number of question 
-// load answers
-//  select the right/wrong answer
-// feedback
-// set next button 
-
-const quizQuestion = document.getElementById("question");
-const answer = document.getElementsByClassName(".answer");
-const textQuizA = document.getElementById("a_text");
-const textQuizB = document.getElementById("b_text");
-const textQuizC = document.getElementById("c_text");
-const textQuizD = document.getElementById("d_text");
-const submit = document.getElementById("submit");
-
-let currentQuiz = 0;
 const quizData = [{
     question: "Where did the Christmas tree originate from?",
     a: "Germany",
@@ -148,22 +119,58 @@ const quizData = [{
     correct: "c",
   },
 ];
-/**
- * create function for loading question with answers
- */
-renderQuestion ()
+// Got elements from DOM
+const startButton = document.getElementById("start-btn");
+const introSection = document.getElementById("intro-section");
+const quizSection = document.getElementById("quiz-section");
+const quizQuestion = document.getElementById("question");
+const answerInputs = document.getElementsByClassName(".answer");
+const textQuizA = document.getElementById("a_text");
+const textQuizB = document.getElementById("b_text");
+const textQuizC = document.getElementById("c_text");
+const textQuizD = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
 
-function renderQuestion () {
-  const currentQuizData = quizData[currentQuiz]
-    quizQuestion.innerText = currentQuizData.question;
-    textQuizA.innerText = currentQuizData.a;
-    textQuizB.innerText = currentQuizData.b;
-    textQuizC.innerText = currentQuizData.c;
-    textQuizD.innerText = currentQuizData.d
+/**
+ * hide the intro section and show the quiz section
+ */
+function showQuiz() {
+  introSection.classList.add("hide");
+  quizSection.classList.remove("hide");
 }
-  console.log(renderQuestion)
-  function populateQuestion() {
-    renderQuestion ()
-    currentQuiz +=1;
-  }
-  console.log(currentQuiz)
+startButton.addEventListener('click', showQuiz);
+// load question 
+// load number of question 
+// load answers
+//  select the right/wrong answer
+// feedback
+// set next button 
+
+let currentQuiz = 0;
+
+/**
+ * load question with answers
+ */
+function renderQuestion() {
+  const currentQuizData = quizData[currentQuiz];
+  quizQuestion.innerText = currentQuizData.question;
+  textQuizA.innerText = currentQuizData.a;
+  textQuizB.innerText = currentQuizData.b;
+  textQuizC.innerText = currentQuizData.c;
+  textQuizD.innerText = currentQuizData.d;
+}
+
+/**
+ * select the right answer
+ */
+let quizAnswer = quizData[currentQuiz];
+if (quizAnswer === quizData[currentQuiz].correct) {
+  quiz.innerText = "You answer right"
+  currentQuiz++
+}
+function nextQuestion () {
+  console.log("nextQuestion");
+  
+}
+submitBtn.addEventListener("click", nextQuestion)
+renderQuestion()
