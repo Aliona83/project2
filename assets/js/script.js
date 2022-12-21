@@ -159,18 +159,15 @@ function renderQuestion() {
   textQuizC.innerText = currentQuizData.c;
   textQuizD.innerText = currentQuizData.d;
 }
-
-/**
- * select the right answer
- */
-let quizAnswer = quizData[currentQuiz];
-if (quizAnswer === quizData[currentQuiz].correct) {
-  quiz.innerText = "You answer right"
+let answer
+let score
+function nextQuestion() { 
   currentQuiz++
-}
-function nextQuestion () {
-  console.log("nextQuestion");
-  
+  if (answer === quizData[currentQuiz].correct) {
+    score++
+  }
 }
 submitBtn.addEventListener("click", nextQuestion)
 renderQuestion()
+nextQuestion()
+
