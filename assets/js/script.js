@@ -129,9 +129,11 @@ const textQuizB = document.getElementById("b_text");
 const textQuizC = document.getElementById("c_text");
 const textQuizD = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
-// const answerInputs = document.getElementsByClassName(".answer");
+const answerInputs = document.getElementsByClassName(".answer");
 const playAgain = document.getElementById("restart");
-const scoreDiv = document.querySelector(".score")
+const scoreDiv = document.querySelector(".score");
+const resultsection1=document.getElementById("result-section");
+
 
 /**
  * hide the intro section and show the quiz section
@@ -149,6 +151,7 @@ let currentQuiz = 0;
 let score = 0;
 let answer
 
+showQuestion();
 function showQuestion() {
    scoreDiv.innerHTML = `Score:${score}/${quizData.length}`
   document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false)
@@ -165,27 +168,38 @@ function showQuestion() {
 /**
  * Handling event listner on button click
  */
-submitBtn.addEventListener("click", showQuestion), () => {
+function nextQuestion() {
   let = answerQuiz = document.querySelector("input[name = answer]:checked");
+  console.log(answerQuiz);
   if(answerQuiz == null)
   {
     alert("Please select one answer");
 
-  } else {
+  }
+   else {
     let answerCorrect = quizData[currentQuiz].correct;
     if(answerQuiz.id == answerCorrect) {
       score++;
+      console.log(score);
     }
   }
   currentQuiz++;
-  if (currentQuiz >= quizData.length) {
+  if (currentQuiz == quizData.length) {
     //shows final answer
-    currentQuiz = 0;
-    localStorage.setItem("score",score);
+    results(score)
   } else {
-    //show next question
     showQuestion();
+    //show next question
 }
-  }
-  showQuestion();
+}
+submitBtn.addEventListener("click", nextQuestion);
+ 
+  function results (score ) {
+    console.log('score',score);
+    playAgain.classList.add("hide");
+    quizSection.classList.add("hide");
+    scoreDiv.classList.remove("hide");
+    resultsection1.classList.remove("hide");
+
+  };
   
