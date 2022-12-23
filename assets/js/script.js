@@ -124,12 +124,14 @@ const startButton = document.getElementById("start-btn");
 const introSection = document.getElementById("intro-section");
 const quizSection = document.getElementById("quiz-section");
 const quizQuestion = document.getElementById("question");
-const answerInputs = document.getElementsByClassName(".answer");
 const textQuizA = document.getElementById("a_text");
 const textQuizB = document.getElementById("b_text");
 const textQuizC = document.getElementById("c_text");
 const textQuizD = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
+// const answerInputs = document.getElementsByClassName(".answer");
+const playAgain = document.getElementById("restart");
+const scoreDiv = document.querySelector(".score")
 
 /**
  * hide the intro section and show the quiz section
@@ -139,35 +141,51 @@ function showQuiz() {
   quizSection.classList.remove("hide");
 }
 startButton.addEventListener('click', showQuiz);
-// load question 
-// load number of question 
-// load answers
-//  select the right/wrong answer
-// feedback
-// set next button 
-
-let currentQuiz = 0;
-
 /**
  * load question with answers
  */
-function renderQuestion() {
-  const currentQuizData = quizData[currentQuiz];
+
+let currentQuiz = 0;
+let score = 0;
+let answer
+
+function showQuestion() {
+   scoreDiv.innerHTML = `Score:${score}/${quizData.length}`
+  document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false)
+   const currentQuizData = quizData[currentQuiz];
+
+  //set questions and answers from array
+
   quizQuestion.innerText = currentQuizData.question;
   textQuizA.innerText = currentQuizData.a;
   textQuizB.innerText = currentQuizData.b;
   textQuizC.innerText = currentQuizData.c;
   textQuizD.innerText = currentQuizData.d;
 }
-let answer
-let score
-function nextQuestion() { 
-  currentQuiz++
-  if (answer === quizData[currentQuiz].correct) {
-    score++
-  }
-}
-submitBtn.addEventListener("click", nextQuestion)
-renderQuestion()
-nextQuestion()
+/**
+ * Handling event listner on button click
+ */
+submitBtn.addEventListener("click", showQuestion), () => {
+  let = answerQuiz = document.querySelector("input[name = answer]:checked");
+  if(answerQuiz == null)
+  {
+    alert("Please select one answer");
 
+  } else {
+    let answerCorrect = quizData[currentQuiz].correct;
+    if(answerQuiz.id == answerCorrect) {
+      score++;
+    }
+  }
+  currentQuiz++;
+  if (currentQuiz >= quizData.length) {
+    //shows final answer
+    currentQuiz = 0;
+    localStorage.setItem("score",score);
+  } else {
+    //show next question
+    showQuestion();
+}
+  }
+  showQuestion();
+  

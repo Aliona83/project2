@@ -136,11 +136,11 @@ const submitBtn = document.getElementById("submit");
 
 
 
-// Start quiz //
-// const usernameBox = document.getElementById("name");
-// const startButton = document.getElementById("myBtn");
-// const username = document.querySelector(".name-field");
-// const storeUsername = localStorage.getItem("text");
+//Start quiz //
+const usernameBox = document.getElementById("name");
+const startButton = document.getElementById("myBtn");
+const username = document.querySelector(".name-field");
+const storeUsername = localStorage.getItem("text");
 
 
  
