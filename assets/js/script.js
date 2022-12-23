@@ -195,7 +195,30 @@ function nextQuestion() {
     showQuestion();
     //show next question
 }
-}
+};
+let counter = 20;
+let questionCount = 0;
+let questions = quizData[currentQuiz];
+setInterval(function () {
+  counter--;
+  if (counter >= 0) {
+    timer.innerText = counter;
+  }
+  if (counter === 0) {
+    timer.innerText = "Time Up!";
+    currentQuiz++
+
+    if (currentQuiz < quizData.length) {
+      loadQuiz()
+
+    } else {
+      quiz.innerHTML = `
+    <h2>Your results${score}/${quizData.length} is
+    <button onclick="location.reload()">Play Again!</button>
+    `
+    }
+  }
+}, 1000);
 submitBtn.addEventListener("click", nextQuestion);
  
   function results (score ) {
