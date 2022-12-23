@@ -133,8 +133,8 @@ const answerInputs = document.getElementsByClassName(".answer");
 const playAgain = document.getElementById("restart");
 const scoreDiv = document.querySelector(".score");
 const resultsection1=document.getElementById("result-section");
-
-
+const questionNumber = document.getElementById("questionNumber")
+const timer = document.getElementById("timer")
 /**
  * hide the intro section and show the quiz section
  */
@@ -164,7 +164,9 @@ function showQuestion() {
   textQuizB.innerText = currentQuizData.b;
   textQuizC.innerText = currentQuizData.c;
   textQuizD.innerText = currentQuizData.d;
+  questionNumber.innerText = currentQuiz + 1;
 }
+
 /**
  * Handling event listner on button click
  */
@@ -186,7 +188,9 @@ function nextQuestion() {
   currentQuiz++;
   if (currentQuiz == quizData.length) {
     //shows final answer
+    
     results(score)
+    
   } else {
     showQuestion();
     //show next question
@@ -196,10 +200,12 @@ submitBtn.addEventListener("click", nextQuestion);
  
   function results (score ) {
     console.log('score',score);
-    playAgain.classList.add("hide");
+    playAgain.classList.remove("hide");
     quizSection.classList.add("hide");
     scoreDiv.classList.remove("hide");
     resultsection1.classList.remove("hide");
-
   };
-  
+  let playGameAgain = document.getElementById("restart");
+  playGameAgain.onclick = function () {
+    window.location.reload();
+  }
