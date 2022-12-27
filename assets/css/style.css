@@ -15,9 +15,8 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     color: #691515;
-    background-color: #d399d39e;
     text-align: center;
     margin-top: 2rem;
     padding: 1rem 0;
@@ -27,12 +26,84 @@ h1 {
 .main-content {
     margin-top: 4rem;
     padding: 1.8rem;
-    background-color: #f9627d99;
 }
 
 h2 {
     text-align: center;
+    font-size: 3rem;
     margin-bottom: 1.2rem;
+    color: #5e0035;;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #5e0035;
+    padding: 25px;
+}
+button {
+    display: block;
+    margin: 1rem auto 0;
+    background-color: #87c38f;
+    border: 3px solid #5c564d;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 8.3rem;
+}
+
+ol {
+    list-style-type: none;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+ul>li {
+    padding: .5rem;
+   list-style-type: none;
+   font-size: 1.5rem;
+   text-align: center;
+}
+.score {
+    text-align: center;
+    font-size: 25px;
+    color: #023618;
+}
+#timer {
+    text-align: center;
+    font-size: 25px;
+}
+.question-number-position {
+    font-size: 25px;
+    text-align: center;
+    margin: 25px;
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+@media screen and (max-width:500px) {
+    h1 {
+        font-size: 3rem;
+        color: #691515;
+        background-color: #d399d39e;
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        text-shadow: 5px 5px 5px white;
+    }
+    .main-content {
+        margin-top: 4rem;
+        padding: 1.8rem;
+        background-color: #f9627d99;
+    }
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    
 }
 
 button {
@@ -54,6 +125,4 @@ ul>li {
     margin-bottom: .3rem;
 }
 
-.hide {
-    display: none;
 }
