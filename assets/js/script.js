@@ -72,9 +72,12 @@ function nextQuestion() {
     
   } else {
     showQuestion();
+    counter =20;
     //show next question
 }
 };
+
+//timer for each question 
 let counter = 20;
 let questionCount = 0;
 let questions = quizData[currentQuiz];
@@ -86,10 +89,8 @@ setInterval(function () {
   if (counter === 0) {
     timer.innerText = "Time Up!";
     currentQuiz++
-
     if (currentQuiz < quizData.length) {
      
-
     } else {
       quiz.innerHTML = `
     <h2>Your results${score}/${quizData.length} is
@@ -98,8 +99,11 @@ setInterval(function () {
     }
   }
 }, 1000);
+
+// button for next question
 submitBtn.addEventListener("click", nextQuestion);
  
+// last page of quiz - results with button play again 
   function results (score ) {
     console.log('score',score);
     playAgain.classList.remove("hide");

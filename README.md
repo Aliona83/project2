@@ -38,3 +38,7 @@ underneath each question has four choices with each of the possible correct answ
 * Button "next"
 User can go to next question.
 * Timer for each question. Gamer player will have 20 seconds for each question. 
+
+
+[color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69)
+add picture of color palette
