@@ -42,3 +42,6 @@ User can go to next question.
 
 [color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69)
 add picture of color palette
+![](assets/images/colour.png)
+)
+)

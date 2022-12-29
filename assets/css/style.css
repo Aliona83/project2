@@ -80,6 +80,11 @@ ul>li {
     margin: 25px;
     color: red;
 }
+#result {
+    text-align: center;
+    font-size:25px;
+    color:red;
+}
 
 .hide {
     display: none;

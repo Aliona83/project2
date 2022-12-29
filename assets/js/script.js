@@ -1,4 +1,3 @@
-
 // Got elements from DOM
 const startButton = document.getElementById("start-btn");
 const introSection = document.getElementById("intro-section");
@@ -12,7 +11,8 @@ const submitBtn = document.getElementById("submit");
 const answerInputs = document.getElementsByClassName(".answer");
 const playAgain = document.getElementById("restart");
 const scoreDiv = document.querySelector(".score");
-const resultsection1=document.getElementById("result-section");
+const resultsection1 = document.getElementById("result-section");
+const result = document.getElementById("result")
 const questionNumber = document.getElementById("questionNumber");
 const timer = document.getElementById("timer")
 /**
@@ -32,10 +32,11 @@ let score = 0;
 let answer
 
 showQuestion();
+
 function showQuestion() {
-   scoreDiv.innerHTML = `Score:${score}/${quizData.length}`
+  scoreDiv.innerHTML = `Score:${score}/${quizData.length}`
   document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false)
-   const currentQuizData = quizData[currentQuiz];
+  const currentQuizData = quizData[currentQuiz];
 
   //set questions and answers from array
 
@@ -52,14 +53,11 @@ function showQuestion() {
  */
 function nextQuestion() {
   let = answerQuiz = document.querySelector("input[name = answer]:checked");
-  if(answerQuiz == null && counter > 0 )
-  {
+  if (answerQuiz == null && counter > 0) {
     alert("Please select one answer");
-
-  }
-   else {
+  } else {
     let answerCorrect = quizData[currentQuiz].correct;
-    if(counter > 0 && answerQuiz != null && answerQuiz.id == answerCorrect) {
+    if (counter > 0 && answerQuiz != null && answerQuiz.id == answerCorrect) {
       score++;
       console.log(score);
     }
@@ -67,14 +65,13 @@ function nextQuestion() {
   currentQuiz++;
   if (currentQuiz == quizData.length) {
     //shows final answer
-    
     results(score)
-    
+
   } else {
     showQuestion();
-    counter =20;
+    counter = 20;
     //show next question
-}
+  }
 };
 
 //timer for each question 
@@ -87,31 +84,27 @@ setInterval(function () {
     timer.innerText = counter;
   }
   if (counter === 0) {
-    timer.innerText = "Time Up!";
-    currentQuiz++
-    if (currentQuiz < quizData.length) {
-     
+    timer.innerText = "Time Up";
+   if (currentQuiz < quizData.length) {
+
     } else {
-      quiz.innerHTML = `
-    <h2>Your results${score}/${quizData.length} is
-    <button onclick="location.reload()">Play Again!</button>
-    `
+      
     }
   }
 }, 1000);
 
 // button for next question
 submitBtn.addEventListener("click", nextQuestion);
- 
+
 // last page of quiz - results with button play again 
-  function results (score ) {
-    console.log('score',score);
-    playAgain.classList.remove("hide");
-    quizSection.classList.add("hide");
-    scoreDiv.classList.remove("hide");
-    resultsection1.classList.remove("hide");
-  };
-  let playGameAgain = document.getElementById("restart");
-  playGameAgain.onclick = function () {
-    window.location.reload();
-  }
+function results(score) {
+  document.getElementById("result").innerHTML = `Score:${score}/${quizData.length}`;
+  playAgain.classList.remove("hide");
+  quizSection.classList.add("hide");
+  scoreDiv.classList.remove("hide");
+  resultsection1.classList.remove("hide");
+};
+let playGameAgain = document.getElementById("restart");
+playGameAgain.onclick = function () {
+  window.location.reload();
+}
