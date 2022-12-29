@@ -8,13 +8,13 @@ const textQuizB = document.getElementById("b_text");
 const textQuizC = document.getElementById("c_text");
 const textQuizD = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
-const answerInputs = document.getElementsByClassName(".answer");
+// const answerInputs = document.getElementsByClassName(".answer");
 const playAgain = document.getElementById("restart");
 const scoreDiv = document.querySelector(".score");
 const resultsection1 = document.getElementById("result-section");
-const result = document.getElementById("result")
+// const result = document.getElementById("result");
 const questionNumber = document.getElementById("questionNumber");
-const timer = document.getElementById("timer")
+const timer = document.getElementById("timer");
 /**
  * hide the intro section and show the quiz section
  */
@@ -29,13 +29,13 @@ startButton.addEventListener('click', showQuiz);
 
 let currentQuiz = 0;
 let score = 0;
-let answer
+// let answer;
 
 showQuestion();
 
 function showQuestion() {
-  scoreDiv.innerHTML = `Score:${score}/${quizData.length}`
-  document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false)
+  scoreDiv.innerHTML = `Score:${score}/${quizData.length}`;
+  document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false);
   const currentQuizData = quizData[currentQuiz];
 
   //set questions and answers from array
@@ -65,18 +65,18 @@ function nextQuestion() {
   currentQuiz++;
   if (currentQuiz == quizData.length) {
     //shows final answer
-    results(score)
+    results(score);
 
   } else {
     showQuestion();
     counter = 20;
     //show next question
   }
-};
+}
 
 //timer for each question 
 let counter = 20;
-let questionCount = 0;
+// let questionCount = 0;
 let questions = quizData[currentQuiz];
 setInterval(function () {
   counter--;
@@ -103,8 +103,8 @@ function results(score) {
   quizSection.classList.add("hide");
   scoreDiv.classList.remove("hide");
   resultsection1.classList.remove("hide");
-};
+}
 let playGameAgain = document.getElementById("restart");
 playGameAgain.onclick = function () {
   window.location.reload();
-}
+};
