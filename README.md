@@ -16,7 +16,13 @@ add link for repository
    * Quiz
    * Result Page
 * Technologies Used
-* Testing
+* Design
+    * Desktop
+    * Tablets
+    * Mobile
+    * Typography
+    * Colour scheme 
+* Deployment using GitHub
 
 ## Project Goals
 ***
