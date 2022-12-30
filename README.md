@@ -42,6 +42,25 @@ User can go to next question.
 #### Result Page :
 * Gamer will be able to see a final score.
 * User will have the opportunity to play again, press button "play again".
+
 [color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
 ![](assets/images/colour.png)
+
+## Technologies Used 
+***
+* HTML5 - basic coding to build  a website for Quiz.
+* CSS3 - use for styling the website.
+* JavaScript - use 
+* Gitpod - used to create website and writing code.
+* GitHub - to store and save the process and files used on the website.
+* [Pexel](https://www.pexels.com/ru-ru/) - got background Christmas image for my Quiz game .
+* [W3C Validator](https://validator.w3.org/) - to validate HTML.
+* [W3C Jicsaw Validator](https://jigsaw.w3.org/css-validator/) - to validate CSS.
+* Am I Responsive - was to used to create a shot to see responsiveness on different devices.
+* [Jshint](https://jshint.com/)- to validate JqavaScript code.
+* [Canva](https://www.canva.com/) - to create Wireframes.
+
+
+
+
 

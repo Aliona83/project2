@@ -8,11 +8,9 @@ const textQuizB = document.getElementById("b_text");
 const textQuizC = document.getElementById("c_text");
 const textQuizD = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
-// const answerInputs = document.getElementsByClassName(".answer");
 const playAgain = document.getElementById("restart");
 const scoreDiv = document.querySelector(".score");
 const resultsection1 = document.getElementById("result-section");
-// const result = document.getElementById("result");
 const questionNumber = document.getElementById("questionNumber");
 const timer = document.getElementById("timer");
 /**
@@ -76,7 +74,6 @@ function nextQuestion() {
 
 //timer for each question 
 let counter = 20;
-// let questionCount = 0;
 let questions = quizData[currentQuiz];
 setInterval(function () {
   counter--;
@@ -85,10 +82,11 @@ setInterval(function () {
   }
   if (counter === 0) {
     timer.innerText = "Time Up";
+    alert("Your time Up ,press next press next button");
    if (currentQuiz < quizData.length) {
 
     } else {
-      
+   nextQuestion()
     }
   }
 }, 1000);
