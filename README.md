@@ -1,6 +1,6 @@
 # Time for Quiz
 Portfolio Project2 - Javascript 
-//add picture of screenshot my quiz//
+![](assets/images/responsive.png)
 ***
 add link for live Siteto mu github(View Time for Quiz on GitHub pages)
 This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
@@ -51,6 +51,9 @@ User can go to next question.
 
 [color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
 ![](assets/images/colour.png)
+For this project ,I chose colors that would fit the theme of Christmas.
+I used the colour scheme  for the text only, as I had  a Christmas background. 
+For game title i used # 691515, for h2,h3 I used #5E0035 colour. Text for rules and answers for question I used regular black colour. 
 
 ## Technologies Used 
 ***
@@ -77,7 +80,11 @@ My draft idea of what the site would look like is shows in the wireframes below.
 No issues found
 ![](assets/images/image.png)
 No issues found
-![](assets/images/image1.png)
 
+![](assets/images/image1.png)
+There I had some issues:The reason why quizData is a underfined variable is because the question for Quiz are in seperate file(question.js)
+Also during the check,it was found that some variables were written ,but not used,I resived the code and removed them,insome place i was missing semicolons.
+![](assets/images/image2.png)
+The game has been tested on  Iphone devices(Iphone 5 ,this phone has a smallest screen) also on Ipad Air devices, Samsung Galaxy S8+ phone and the last check had been done on  MacBook computer.
 
 
