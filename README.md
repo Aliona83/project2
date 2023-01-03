@@ -10,7 +10,7 @@ This is a quiz application using HTML, CSS, and Javascript. This application emp
 ***
 * Project Goals 
 * Target Audience
-* Existing Feutures
+* Existing Features
    * Home Page
    * Quiz Rules
    * Quiz
@@ -22,7 +22,11 @@ This is a quiz application using HTML, CSS, and Javascript. This application emp
     * Mobile
     * Typography
     * Colour scheme 
+* Testing 
 * Deployment using GitHub
+* Acknowledgments 
+* Credits and References
+
 
 ## Project Goals
 ***
@@ -32,7 +36,7 @@ To create this project, I was inspired by the moment when approached my holidays
 ***
 This project will help to remember some traditions, and facts about Christmas. The idea of this project is to bring the whole family together, and create a pleasant atmosphere and sense of celebration. I want that this game to be easy to understand how to ply. And it would be easy to control this game first of all for kids. Each game has to be a fun.
 
-## Structure 
+## Existing Features
 ***
 The game will be broken into three areas :
 #### Home page :
@@ -48,12 +52,6 @@ User can go to next question.
 #### Result Page :
 * Gamer will be able to see a final score.
 * User will have the opportunity to play again, press button "play again".
-
-[color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
-![](assets/images/colour.png)
-For this project ,I chose colors that would fit the theme of Christmas.
-I used the colour scheme  for the text only, as I had  a Christmas background. 
-For game title i used # 691515, for h2,h3 I used #5E0035 colour. Text for rules and answers for question I used regular black colour. 
 
 ## Technologies Used 
 ***
@@ -71,9 +69,20 @@ For game title i used # 691515, for h2,h3 I used #5E0035 colour. Text for rules 
 * [Wave Chrome extension](https://wave.webaim.org/) - to check web accessibility.
 ## Design
 ***
+* FWireframes
+I used Canva.com to create the wireframes for my Quiz. It should have a title and the Quiz rules on main page of Quiz. After pressing button to Start Quiz user enters the page with quiz questions and answers, score and timer. On the last page should be User's results and Play again button.
 ![](assets/images/wireframe.png)
 My draft idea of what the site would look like is shows in the wireframes below.
 ![](assets/images/phone.png)
+
+* Typographhy 
+For text in this project, I used "Exo". This font style I used for all headings and for header. 
+
+[color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
+![](assets/images/colour.png)
+For this project ,I choOse colors that would fit the theme of Christmas.
+I used the colour scheme  for the text only, as I had  a Christmas background. 
+For game title i used # 691515, for h2,h3 I used #5E0035 colour. Text for rules and answers for question I used regular black colour. 
 
 ## Testing 
 ***
@@ -84,7 +93,30 @@ No issues found
 ![](assets/images/image1.png)
 There I had some issues:The reason why quizData is a underfined variable is because the question for Quiz are in seperate file(question.js)
 Also during the check,it was found that some variables were written ,but not used,I resived the code and removed them,insome place i was missing semicolons.
+
 ![](assets/images/image2.png)
 The game has been tested on  Iphone devices(Iphone 5 ,this phone has a smallest screen) also on Ipad Air devices, Samsung Galaxy S8+ phone and the last check had been done on  MacBook computer.
+
+![](assets/images/wave.png)
+ I checked the site with Wave. There no errors, but had 2 alerts. 
+ 
+ 
+
+
+## Deployment using GitHub
+***
+  * Navigate to project repository.
+  * Click on the Settings Tab.
+  * Scroll down to page.
+  * For the source, select main branch.
+  * Click save.
+  * Open the link provided by GitHub to go to the deployed website. Link is on the top of page.
+
+## Acknowledgments 
+***
+I am very acknowledgments to the Code Institute team who help me with this project. Also S lack community, for motivating and always being there.To my mentor Rohit Sharma who help me to fix my mistakes,and explained everything smoothly.
+ ## Credits and References
+ ***
+
 
 

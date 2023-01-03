@@ -56,7 +56,6 @@ ol {
     list-style-type: none;
     text-align: center;
     font-size: 25px;
-    
 }
 
 ul>li {
@@ -78,12 +77,12 @@ ul>li {
     font-size: 25px;
     text-align: center;
     margin: 25px;
-    color: red;
+    color: #005C69;
 }
 #result {
     text-align: center;
     font-size:25px;
-    color:red;
+    color: #005C69;
 }
 
 .hide {
@@ -101,7 +100,7 @@ ul>li {
     }
     .main-content {
         padding: .8rem;
-        background-color: #f9627d2b;
+       background-color: #f9627d70;
     }
     .question-number-position {
     margin: 1rem;
@@ -156,12 +155,10 @@ h2 {
 }
 .main-content {
     margin-top: 1rem;
+    background-color: #f9627d70;
 }
 h3 {
     font-size: 1.6rem;
-}
-#quiz-section {
-    background-color: #f9627d2b;
 }
 .question-number-position {
  color: #950952;
