@@ -5,7 +5,7 @@ Portfolio Project2 - Javascript
 add link for live Siteto mu github(View Time for Quiz on GitHub pages)
 This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
 ***
-add link for repository
+[link for repository](https://github.com/Aliona83/project2/settings/pages)
 ## Contents
 ***
 * Project Goals 
@@ -65,8 +65,19 @@ User can go to next question.
 * Am I Responsive - was to used to create a shot to see responsiveness on different devices.
 * [Jshint](https://jshint.com/)- to validate JqavaScript code.
 * [Canva](https://www.canva.com/) - to create Wireframes.
+* [Wave Chrome extension](https://wave.webaim.org/) - to check web accessibility.
+## Design
+***
+![](assets/images/wireframe.png)
+My draft idea of what the site would look like is shows in the wireframes below.
+![](assets/images/phone.png)
 
-
+## Testing 
+***
+No issues found
+![](assets/images/image.png)
+No issues found
+![](assets/images/image1.png)
 
 
 

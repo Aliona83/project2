@@ -82,7 +82,7 @@ setInterval(function () {
   }
   if (counter === 0) {
     timer.innerText = "Time Up";
-    alert("Your time Up ,press next press next button");
+    alert("Your time Up ,press  button for next question");
    if (currentQuiz < QUIZ_DATA.length) {
 
     } else {
