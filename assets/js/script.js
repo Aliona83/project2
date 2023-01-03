@@ -50,11 +50,13 @@ function showQuestion() {
  * Handling event listner on button click
  */
 function nextQuestion() {
-  let = answerQuiz = document.querySelector("input[name = answer]:checked");
+  let = answerQuiz 
+  document.querySelector("input[name = answer]:checked");
   if (answerQuiz == null && counter > 0) {
     alert("Please select one answer");
   } else {
-    let answerCorrect = QUIZ_DATA[currentQuiz].correct;
+    let answerCorrect 
+    QUIZ_DATA[currentQuiz].correct;
     if (counter > 0 && answerQuiz != null && answerQuiz.id == answerCorrect) {
       score++;
       console.log(score);
@@ -81,14 +83,12 @@ setInterval(function () {
     timer.innerText = counter;
   }
   if (counter === 0) {
-    timer.innerText = "Time Up";
-    alert("Your time Up ,press  button for next question");
-   if (currentQuiz < QUIZ_DATA.length) {
 
     } else {
-   nextQuestion()
-    }
-  }
+      quizQuestion.addEventListener("click",function() {
+        showQuestion();
+  });
+}
 }, 1000);
 
 // button for next question

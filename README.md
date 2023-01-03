@@ -2,7 +2,7 @@
 Portfolio Project2 - Javascript 
 ![](assets/images/responsive.png)
 ***
-add link for live Siteto mu github(View Time for Quiz on GitHub pages)
+
 This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
 ***
 [link for repository](https://github.com/Aliona83/project2/settings/pages)
@@ -28,15 +28,15 @@ This is a quiz application using HTML, CSS, and Javascript. This application emp
 * Credits and References
 
 
-## Project Goals
+### Project Goals
 ***
 To create this project, I was inspired by the moment when approached my holidays. The idea came to me while we with family were decorating a Christmas tree. When creating this Quiz, I thought it not only for adults but also that this quiz would be interesting for children. Questions of various types were selected for both children and adults. This is such a family game that you can play on the Christmas holidays together with your friend and family.
     I want that for Gamer player will be to easy. understant the main purpose of the Quiz and learn something from quiz.
-## Target Audience 
+### Target Audience 
 ***
 This project will help to remember some traditions, and facts about Christmas. The idea of this project is to bring the whole family together, and create a pleasant atmosphere and sense of celebration. I want that this game to be easy to understand how to ply. And it would be easy to control this game first of all for kids. Each game has to be a fun.
 
-## Existing Features
+### Existing Features
 ***
 The game will be broken into three areas :
 #### Home page :
@@ -53,7 +53,7 @@ User can go to next question.
 * Gamer will be able to see a final score.
 * User will have the opportunity to play again, press button "play again".
 
-## Technologies Used 
+### Technologies Used 
 ***
 * HTML5 - basic coding to build  a website for Quiz.
 * CSS3 - use for styling the website.
@@ -69,14 +69,18 @@ User can go to next question.
 * [Wave Chrome extension](https://wave.webaim.org/) - to check web accessibility.
 ## Design
 ***
-* FWireframes
+### Wireframes
+
 I used Canva.com to create the wireframes for my Quiz. It should have a title and the Quiz rules on main page of Quiz. After pressing button to Start Quiz user enters the page with quiz questions and answers, score and timer. On the last page should be User's results and Play again button.
 ![](assets/images/wireframe.png)
 My draft idea of what the site would look like is shows in the wireframes below.
 ![](assets/images/phone.png)
 
-* Typographhy 
+### Typographhy 
+
 For text in this project, I used "Exo". This font style I used for all headings and for header. 
+
+### Color palette
 
 [color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
 ![](assets/images/colour.png)
@@ -98,6 +102,7 @@ Also during the check,it was found that some variables were written ,but not use
 The game has been tested on  Iphone devices(Iphone 5 ,this phone has a smallest screen) also on Ipad Air devices, Samsung Galaxy S8+ phone and the last check had been done on  MacBook computer.
 
 ![](assets/images/wave.png)
+ 
  I checked the site with Wave. There no errors, but had 2 alerts. 
  
  
