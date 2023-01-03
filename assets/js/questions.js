@@ -1,4 +1,4 @@
-const quizData = [{
+const QUIZ_DATA = [{
     question: "Where did the Christmas tree originate from?",
     a: "Germany",
     b: "Ireland",

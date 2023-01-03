@@ -32,9 +32,9 @@ let score = 0;
 showQuestion();
 
 function showQuestion() {
-  scoreDiv.innerHTML = `Score:${score}/${quizData.length}`;
+  scoreDiv.innerHTML = `Score:${score}/${QUIZ_DATA.length}`;
   document.querySelectorAll("input[name = answer]").forEach(option => option.checked = false);
-  const currentQuizData = quizData[currentQuiz];
+  const currentQuizData = QUIZ_DATA[currentQuiz];
 
   //set questions and answers from array
 
@@ -54,14 +54,14 @@ function nextQuestion() {
   if (answerQuiz == null && counter > 0) {
     alert("Please select one answer");
   } else {
-    let answerCorrect = quizData[currentQuiz].correct;
+    let answerCorrect = QUIZ_DATA[currentQuiz].correct;
     if (counter > 0 && answerQuiz != null && answerQuiz.id == answerCorrect) {
       score++;
       console.log(score);
     }
   }
   currentQuiz++;
-  if (currentQuiz == quizData.length) {
+  if (currentQuiz == QUIZ_DATA.length) {
     //shows final answer
     results(score);
 
@@ -74,7 +74,7 @@ function nextQuestion() {
 
 //timer for each question 
 let counter = 20;
-let questions = quizData[currentQuiz];
+let questions = QUIZ_DATA[currentQuiz];
 setInterval(function () {
   counter--;
   if (counter >= 0) {
@@ -83,7 +83,7 @@ setInterval(function () {
   if (counter === 0) {
     timer.innerText = "Time Up";
     alert("Your time Up ,press next press next button");
-   if (currentQuiz < quizData.length) {
+   if (currentQuiz < QUIZ_DATA.length) {
 
     } else {
    nextQuestion()
@@ -96,7 +96,7 @@ submitBtn.addEventListener("click", nextQuestion);
 
 // last page of quiz - results with button play again 
 function results(score) {
-  document.getElementById("result").innerHTML = `Score:${score}/${quizData.length}`;
+  document.getElementById("result").innerHTML = `Score:${score}/${QUIZ_DATA.length}`;
   playAgain.classList.remove("hide");
   quizSection.classList.add("hide");
   scoreDiv.classList.remove("hide");
