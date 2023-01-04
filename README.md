@@ -5,7 +5,7 @@ Portfolio Project2 - Javascript
 
 This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
 ***
-[link for repository](https://github.com/Aliona83/project2/settings/pages)
+[Link for repository](https://github.com/Aliona83/project2/settings/pages)
 ## Contents
 ***
 * Project Goals 
@@ -31,25 +31,41 @@ This is a quiz application using HTML, CSS, and Javascript. This application emp
 ### Project Goals
 ***
 To create this project, I was inspired by the moment when approached my holidays. The idea came to me while we with family were decorating a Christmas tree. When creating this Quiz, I thought it not only for adults but also that this quiz would be interesting for children. Questions of various types were selected for both children and adults. This is such a family game that you can play on the Christmas holidays together with your friend and family.
-    I want that for Gamer player will be to easy. understant the main purpose of the Quiz and learn something from quiz.
+I want that for Gamer player will be to easy understant the main purpose of the Quiz and learn something from quiz.
+  * As a creator, I want the user to have simple interface.
+  * As a creater I want the user will learn something new from the Quiz.
+  * as a creater I want the user to be able to have an instruction section of the game.
+  * As a creater I want for user the game be easy to manage and understand.
+
 ### Target Audience 
 ***
 This project will help to remember some traditions, and facts about Christmas. The idea of this project is to bring the whole family together, and create a pleasant atmosphere and sense of celebration. I want that this game to be easy to understand how to ply. And it would be easy to control this game first of all for kids. Each game has to be a fun.
+   * As a user, I want to be able to see the all question of the Quiz.
+   * As a user, I want to  be able to see total numbers of questions.
+   * As a user, I want to see time remaining for each question.
+   * As a user, I want to get a fun and  get a new knowledges from this quiz.
 
 ### Existing Features
 ***
 The game will be broken into three areas :
 #### Home page :
 * Title of Quiz game.
-"Play button" takes the user to the Quiz rules. Quiz rules tells how visiter have to play the game.
+![Title of Quiz](assets/images/title.png)
+
+ * "Start Quiz" button
+ ![](assets/images/start.png)
+ * Quiz rules.
+ ![](assets/images/rules.png)
+ Quiz rules tells how visiter have to play the game.
 #### Game page 
+![]()
 * Display a randomly generated question for user.
 underneath each question has four choices with each of the possible correct answers.
 * Button "next"
 User can go to next question.
 * Timer for each question. Gamer player will have 20 seconds for each question. 
-
 #### Result Page :
+![]()
 * Gamer will be able to see a final score.
 * User will have the opportunity to play again, press button "play again".
 
@@ -69,7 +85,7 @@ User can go to next question.
 * [Wave Chrome extension](https://wave.webaim.org/) - to check web accessibility.
 ## Design
 ***
-### Wireframes
+#### Wireframes
 
 I used Canva.com to create the wireframes for my Quiz. It should have a title and the Quiz rules on main page of Quiz. After pressing button to Start Quiz user enters the page with quiz questions and answers, score and timer. On the last page should be User's results and Play again button.
 ![](assets/images/wireframe.png)
@@ -78,15 +94,20 @@ My draft idea of what the site would look like is shows in the wireframes below.
 
 ### Typographhy 
 
-For text in this project, I used "Exo". This font style I used for all headings and for header. 
+ I used for text in this project from Google Font, I selected "Exo". This font style I used for all headings and for title. 
 
 ### Color palette
 
 [color pallete](https://coolors.co/950952-5e0035-020202-023618-005c69
 ![](assets/images/colour.png)
-For this project ,I choOse colors that would fit the theme of Christmas.
+For this project ,I choose colors that would fit the theme of Christmas.
 I used the colour scheme  for the text only, as I had  a Christmas background. 
-For game title i used # 691515, for h2,h3 I used #5E0035 colour. Text for rules and answers for question I used regular black colour. 
+Also colour set was selected that user would be comfortable and visible. 
+  * For game title I used #691515, 
+  * For <h2> I used #5E0035 colour. 
+  * Text for rules and answers for question I used regular black colour. 
+  * For score I used #005c69.
+  * All buttons I made colour #87c38f.
 
 ## Testing 
 ***
@@ -104,9 +125,6 @@ The game has been tested on  Iphone devices(Iphone 5 ,this phone has a smallest 
 ![](assets/images/wave.png)
  
  I checked the site with Wave. There no errors, but had 2 alerts. 
- 
- 
-
 
 ## Deployment using GitHub
 ***
