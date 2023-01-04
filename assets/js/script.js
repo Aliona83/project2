@@ -10,9 +10,14 @@ const textQuizD = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 const playAgain = document.getElementById("restart");
 const scoreDiv = document.querySelector(".score");
-const resultsection1 = document.getElementById("result-section");
+const resultsectionOne = document.getElementById("result-section");
 const questionNumber = document.getElementById("questionNumber");
 const timer = document.getElementById("timer");
+
+let currentQuiz = 0;
+let score = 0;
+let counter = 20;
+
 /**
  * hide the intro section and show the quiz section
  */
@@ -20,15 +25,20 @@ function showQuiz() {
   introSection.classList.add("hide");
   quizSection.classList.remove("hide");
 }
-startButton.addEventListener('click', showQuiz);
+window.addEventListener('DOMContentLoaded',(event) => {
+  startButton.addEventListener('click', showQuiz);
+  playAgain.addEventListener('click',playAgain)
+  submitBtn.addEventListener("click", nextQuestion);
+});
+
+let playBtnAgain = document.getElementById("restart");
+function playGameAgain () {
+  window.location.reload();
+};
+
 /**
  * load question with answers
  */
-
-let currentQuiz = 0;
-let score = 0;
-// let answer;
-
 showQuestion();
 
 function showQuestion() {
@@ -37,7 +47,6 @@ function showQuestion() {
   const currentQuizData = QUIZ_DATA[currentQuiz];
 
   //set questions and answers from array
-
   quizQuestion.innerText = currentQuizData.question;
   textQuizA.innerText = currentQuizData.a;
   textQuizB.innerText = currentQuizData.b;
@@ -45,21 +54,18 @@ function showQuestion() {
   textQuizD.innerText = currentQuizData.d;
   questionNumber.innerText = currentQuiz + 1;
 }
-
 /**
  * Handling event listner on button click
  */
 function nextQuestion() {
-  let = answerQuiz 
-  document.querySelector("input[name = answer]:checked");
+  let = answerQuiz = document.querySelector("input[name = answer]:checked");
   if (answerQuiz == null && counter > 0) {
     alert("Please select one answer");
+    return;
   } else {
-    let answerCorrect 
-    QUIZ_DATA[currentQuiz].correct;
+    let answerCorrect = QUIZ_DATA[currentQuiz].correct;
     if (counter > 0 && answerQuiz != null && answerQuiz.id == answerCorrect) {
       score++;
-      console.log(score);
     }
   }
   currentQuiz++;
@@ -70,12 +76,9 @@ function nextQuestion() {
   } else {
     showQuestion();
     counter = 20;
-    //show next question
   }
 }
 
-//timer for each question 
-let counter = 20;
 let questions = QUIZ_DATA[currentQuiz];
 setInterval(function () {
   counter--;
@@ -83,26 +86,21 @@ setInterval(function () {
     timer.innerText = counter;
   }
   if (counter === 0) {
-
-    } else {
-      quizQuestion.addEventListener("click",function() {
-        showQuestion();
-  });
-}
+    timer.innerText = "Time Up";
+    alert("Your time up,press for next question");
+    if (currentQuiz >= QUIZ_DATA.length) {
+      nextQuestion()
+    }
+  }
 }, 1000);
 
-// button for next question
-submitBtn.addEventListener("click", nextQuestion);
-
-// last page of quiz - results with button play again 
+/**
+ * Function to show results
+ */
 function results(score) {
   document.getElementById("result").innerHTML = `Score:${score}/${QUIZ_DATA.length}`;
   playAgain.classList.remove("hide");
   quizSection.classList.add("hide");
   scoreDiv.classList.remove("hide");
-  resultsection1.classList.remove("hide");
+  resultsectionOne.classList.remove("hide");
 }
-let playGameAgain = document.getElementById("restart");
-playGameAgain.onclick = function () {
-  window.location.reload();
-};
