@@ -69,10 +69,14 @@ ul>li {
     font-size: 25px;
     color: #023618;
 }
-#timer {
+#timer, #timer-text {
     text-align: center;
     font-size: 25px;
 }
+fieldset {
+ border: none;
+}
+
 .question-number-position {
     font-size: 25px;
     text-align: center;

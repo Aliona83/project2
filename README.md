@@ -139,10 +139,11 @@ Also during the check, it was found that some variables were written, but not us
 
 ![](assets/images/wave.png)
  
- * I checked the site with Wave. There no errors, but had 2 alerts. 
+ * I checked the site with Wave. There no errors, but had 2 alerts. Should have to add fieldset tag for radio buttons.
  * Mobile and desktop Lighthouse
  ![](assets/images/mobile.png)
  ![](assets/images/destop.png)
+
 ## Deployment using GitHub
 ***
   * Navigate to project repository.

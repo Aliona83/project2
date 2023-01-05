@@ -56,7 +56,7 @@ function showQuestion() {
  * Handling event listner on button click
  */
 function nextQuestion() {
-  let = answerQuiz = document.querySelector("input[name = answer]:checked");
+  let answerQuiz = document.querySelector("input[name = answer]:checked");
   if (answerQuiz == null && counter > 0) {
     alert("Please select one answer");
     return;
@@ -88,12 +88,16 @@ let questions = QUIZ_DATA[currentQuiz];
     timer.innerText = "Time Up";
     alert("Your time up,press for next question");
     if (currentQuiz >= QUIZ_DATA.length) {
-      nextQuestion()
+      nextQuestion();
+      if (QUIZ_DATA[currentQuiz]<= 0){
+        myStopTimer();
+      }
+      
     }
   }
 }, 1000);
-function myStopTimer(){
-  clearInterval(myInterval)
+function myStopTimer() {
+  clearInterval(myInterval);
 }
 
 /**
@@ -110,4 +114,4 @@ function results(score) {
 
 playAgain.onclick = function () {
   window.location.reload();
-}
+};
