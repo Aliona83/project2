@@ -27,14 +27,12 @@ function showQuiz() {
 }
 window.addEventListener('DOMContentLoaded',(event) => {
   startButton.addEventListener('click', showQuiz);
-  playAgain.addEventListener('click',playAgain)
+  let playBtnAgain = document.getElementById("restart");
   submitBtn.addEventListener("click", nextQuestion);
 });
 
-let playBtnAgain = document.getElementById("restart");
-function playGameAgain () {
-  window.location.reload();
-};
+
+
 
 /**
  * load question with answers
@@ -72,6 +70,7 @@ function nextQuestion() {
   if (currentQuiz == QUIZ_DATA.length) {
     //shows final answer
     results(score);
+    myStopTimer();
 
   } else {
     showQuestion();
@@ -80,7 +79,7 @@ function nextQuestion() {
 }
 
 let questions = QUIZ_DATA[currentQuiz];
-setInterval(function () {
+ let myInterval = setInterval(function () {
   counter--;
   if (counter >= 0) {
     timer.innerText = counter;
@@ -93,6 +92,9 @@ setInterval(function () {
     }
   }
 }, 1000);
+function myStopTimer(){
+  clearInterval(myInterval)
+}
 
 /**
  * Function to show results
@@ -103,4 +105,9 @@ function results(score) {
   quizSection.classList.add("hide");
   scoreDiv.classList.remove("hide");
   resultsectionOne.classList.remove("hide");
+}
+
+
+playAgain.onclick = function () {
+  window.location.reload();
 }

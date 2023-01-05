@@ -171,8 +171,8 @@ I am very acknowledgments to the Code Institute team who help me with this proje
  ## Credits and References
  ***
 ### Information Recources
-* [](https://www.youtube.com/watch?v=riDzcEQbX6k)
-* [](https://stackoverflow.com/)
+* [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+* [Stackoverflow](https://stackoverflow.com/)
 
 
 
